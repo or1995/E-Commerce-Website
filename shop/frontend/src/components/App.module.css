@@ -1,0 +1,33 @@
+:root {
+    --main-font: 'Montserrat', sans-serif;
+    --logo-font: 'Major Mono Display', monospace;
+    --main-color-dark: #ab4827;
+    --main-color: #CF5C36;
+    --main-color-light: #ff9875;
+    --secondary-color-dark: #d9c898;
+    --secondary-color: #F4E3B2;
+    --secondary-color-light: #fff5db;
+    --grey-dark: #242424;
+    --grey: #707070;
+    --grey-light: #d4d4d4;
+    --grey-very-light: #fbfbfb;
+  }
+  
+  
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 5rem;
+  /*overflow-x: hidden;*/
+}
+
+
+@media only screen and (max-width: 980px) {
+  body {
+    padding-top: 4rem;
+  }
+}

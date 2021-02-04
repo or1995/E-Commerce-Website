@@ -1,0 +1,485 @@
+.carouselouter {
+    position: relative;
+    height: 35rem;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.carousel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 28rem;
+    transition: all .5s;
+}
+
+.car {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 28rem;
+    background-color: var(--secondary-color);
+}
+
+.cardesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 55%;
+    background-color: var(--main-color);
+    background-image: linear-gradient(rgba(207,92,54,.98), rgba(207,92,54,.98)), url('../../../media/back.jpg');
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+    padding-left: 5rem;
+}
+
+.carimg {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    width: 45%;
+    overflow: hidden;
+}
+
+.imgactive {
+    width: 33rem;
+    height: auto;
+    transition: all 1s;
+    animation: imgani 5s linear ;
+}
+
+.img {
+    width: 33rem;
+    height: auto;
+}
+
+.cardesc2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 55%;
+    background-color: var(--main-color);
+    background-image: linear-gradient(rgba(207,92,54,.98), rgba(207,92,54,.98)), url('../../../media/back.jpg');
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    padding-right: 5rem;
+}
+
+.caedesccontentactive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    animation: descani .6s linear 0s;
+}
+
+.caedesccontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.caedesccontentactive h1 {
+    font-family: var(--main-font);
+    font-weight: 400;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: .2rem;
+}
+
+.caedesccontentactive p {
+    width: 29.5rem;
+    text-align: center;
+    font-family: var(--main-font);
+    font-weight: 300;
+    color: #fff;
+    font-size: .8rem;
+    margin-bottom: .4rem;
+}
+
+.caedesccontentactive a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    padding: .4rem 1rem;
+    margin-top: 1rem;
+}
+
+.caedesccontent h1 {
+    font-family: var(--main-font);
+    font-weight: 400;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: .2rem;
+}
+
+.caedesccontent p {
+    width: 29.5rem;
+    text-align: center;
+    font-family: var(--main-font);
+    font-weight: 300;
+    color: #fff;
+    font-size: .8rem;
+    margin-bottom: .4rem;
+}
+
+.caedesccontent a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: var(--main-font);
+    color: #fff;
+    border: 1px solid #fff;
+    padding: .4rem 1rem;
+    margin-top: 1rem;
+}
+
+.carouselbuttons {
+    position: absolute;
+    top: 29rem;
+    left: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 1rem;
+}
+
+.carouselbuttonouter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: .4rem;
+    border-radius: 3px;
+    background-color: var(--secondary-color);
+    margin-right: .2rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.carouselbuttoninner {
+    width: 1.8rem;
+    height: .4rem;
+    border-radius: 3px;
+    background-color: var(--main-color);
+    animation: timerbutton 5s linear 0s;
+}
+
+.carouselbuttoninnerback {
+    width: 1.8rem;
+    height: .4rem;
+    border-radius: 3px;
+    background-color: var(--main-color);
+    animation: timerbuttonreverse 5s linear 0s;
+}
+
+@keyframes timerbutton {
+    0% {
+        transform: translateX(-1.8rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes timerbuttonreverse {
+    0% {
+        transform: translateX(1.8rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes imgani {
+    0% {
+        transform: scale(.98) translateY(.5rem);
+    }
+    100% {
+        transform: scale(1) translateY(0rem);
+    }
+}
+
+@keyframes descani {
+    0% {
+        transform: translateY(.5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+    .carouselouter {
+        height: 25rem;
+    }
+
+    .carousel {
+        height: 22rem;
+    }
+
+    .car {
+        height: 22rem;
+    }
+
+    .imgactive {
+        width: 20rem;
+    }
+
+    .img {
+        width: 20rem;
+    }
+    
+    .caedesccontentactive h1 {
+        font-size: 1.5rem;
+    }
+    
+    .caedesccontentactive p {
+        width: 22rem;
+        font-size: .5rem;
+    }
+    
+    .caedesccontentactive a {
+        font-size: 1rem;
+        padding: .4rem 1rem;
+        margin-top: 1rem;
+    }
+    
+    .caedesccontent h1 {
+        font-size: 1.5rem;
+    }
+    
+    .caedesccontent p {
+        width: 22rem;
+        font-size: .6rem;
+    }
+    
+    .caedesccontent a {
+        font-size: 1rem;
+        padding: .4rem 1rem;
+        margin-top: 1rem;
+    }
+    
+    .carouselbuttons {
+        position: absolute;
+        top: 23rem;
+        left: 45vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10vw;
+        height: 1rem;
+    }
+    
+    .carouselbuttonouter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.8rem;
+        height: .4rem;
+        border-radius: 3px;
+        background-color: var(--secondary-color);
+        margin-right: .2rem;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+    .carouselbuttoninner {
+        width: 1.8rem;
+        height: .4rem;
+        border-radius: 3px;
+        background-color: var(--main-color);
+        animation: timerbutton 5s linear 0s;
+    }
+    
+    .carouselbuttoninnerback {
+        width: 1.8rem;
+        height: .4rem;
+        border-radius: 3px;
+        background-color: var(--main-color);
+        animation: timerbuttonreverse 5s linear 0s;
+    }
+
+    .cardesc {
+        padding-left: 1rem;
+    }
+
+    .cardesc2 {
+        padding-right: 1rem;
+    }
+
+    .carouselbuttons {
+        width: 16vw;
+        left: 43vw;
+    }
+
+    
+}
+
+@media only screen and (max-width: 735px) {
+    .carouselouter {
+        height: 22rem;
+    }
+
+    .carousel {
+        height: 20rem;
+    }
+
+    .car {
+        height: 20rem;
+    }
+
+    .imgactive {
+        width: 22rem;
+    }
+
+    .img {
+        width: 22rem;
+    }
+
+    .cardesc {
+        clip-path: none;
+        width: 50%;
+        padding-left: 0rem;
+    }
+
+    .carimg {
+        width: 50%;
+    }
+
+    .cardesc2 {
+        clip-path: none;
+        width: 50%;
+        padding-left: 0rem;
+    }
+
+    .carimg2 {
+        width: 50%;
+    }
+
+    .caedesccontentactive h1 {
+        font-size: 1.2rem;
+    }
+
+    .caedesccontentactive p {
+        width: 16rem;
+        font-size: .5rem;
+    }
+
+    .caedesccontent h1 {
+        font-size: 1.2rem;
+    }
+
+    .caedesccontent p {
+        width: 16rem;
+        font-size: .5rem;
+    }
+
+    .carouselbuttons {
+        top: 21rem;
+    }
+
+    .carouselbuttons {
+        width: 20vw;
+        left: 40vw;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .carouselouter {
+        height: 15rem;
+    }
+
+    .carousel {
+        height: 13rem;
+    }
+
+    .car {
+        height: 13rem;
+    }
+
+    .imgactive {
+        width: 15rem;
+    }
+
+    .img {
+        width: 15rem;
+    }
+
+    .caedesccontentactive h1 {
+        font-size: .7rem;
+    }
+
+    .caedesccontentactive p {
+        width: 11rem;
+        font-size: .4rem;
+    }
+
+    .caedesccontent h1 {
+        font-size: .7rem;
+    }
+
+    .caedesccontent p {
+        width: 11rem;
+        font-size: .4rem;
+    }
+
+    .carouselbuttons {
+        top: 14rem;
+    }
+
+    .caedesccontentactive a {
+        font-size: .7rem;
+        padding: .4rem 1rem;
+        margin-top: .5rem;
+    }
+
+    .caedesccontent a {
+        font-size: .7rem;
+        padding: .4rem 1rem;
+        margin-top: .5rem;
+    }
+
+    .carouselbuttons {
+        width: 24vw;
+        left: 38vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .caedesccontentactive h1 {
+        font-size: .5rem;
+    }
+
+    .caedesccontentactive p {
+        width: 8rem;
+        font-size: .4rem;
+    }
+
+    .caedesccontent h1 {
+        font-size: .5rem;
+    }
+
+    .caedesccontent p {
+        width: 8rem;
+        font-size: .4rem;
+    }
+
+    .carouselbuttons {
+        width: 28vw;
+        left: 36vw;
+    }
+}

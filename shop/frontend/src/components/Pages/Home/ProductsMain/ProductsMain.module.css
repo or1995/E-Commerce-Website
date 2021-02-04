@@ -1,0 +1,214 @@
+.productsmain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.productstitle {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.productstitle h2 {
+    font-family: var(--main-font);
+    color: var(--grey);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.sortingdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.sortingitem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    padding: .2rem .5rem;
+    cursor: pointer;
+    border-radius: 1.5rem;
+}
+
+.sortingitemactive {
+    background-color: var(--main-color);
+}
+
+.sortingitemactive h3 {
+    color: #fff !important;
+}
+
+.sortingdiv h3 {
+    font-family: var(--main-font);
+    color: var(--grey);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.sortdirection {
+    margin-left: .4rem;
+    transform: rotate(90deg);
+    transform-origin: center center;
+    transition: all .3s;
+}
+
+.sortdirectionreverse {
+    transform: rotate(270deg);
+    transition: all .3s;
+}
+
+.productsgrid {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+:global(.infinite-scroll-component__outerdiv) {
+    width: 100%;
+}
+
+:global(.infinite-scroll-component) {
+    width: 100%; 
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    grid-auto-rows: 16rem;
+    gap: 3.5rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.spinnercontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 5rem;
+}
+
+.endMessage {
+    font-family: var(--main-font);
+    color: var(--grey);
+    font-size: 1.4rem;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-bottom: 1rem;
+    font-weight: 400;
+} 
+
+@media only screen and (max-width: 1200px) {
+    :global(.infinite-scroll-component) {
+        grid-template-columns: 17rem 17rem 17rem !important;
+        gap: .5rem !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .productsgrid {
+        width: 100%;
+    }
+
+    .productsmain {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    :global(.infinite-scroll-component) {
+        grid-template-columns: 20rem 20rem !important;
+        gap: 1.5rem !important;
+    }
+
+    .productstitle h2 {
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    :global(.infinite-scroll-component) {
+        grid-template-columns: 16rem 16rem !important;
+        grid-auto-rows: 14rem !important;
+        gap: 1.5rem !important;
+    }
+
+    .productstitle h2 {
+        font-size: 1.2rem;
+        margin-left: 2rem;
+    }
+
+    .sortingitem {
+        margin-left: .3rem;
+        padding: .2rem .5rem;
+    }
+
+    .sortingdiv {
+        margin-top: .5rem;
+    }
+
+    .sortingdiv h3 {
+        font-size: .7rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :global(.infinite-scroll-component) {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .productstitle {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .productstitle h2 {
+        margin-left: .7rem;
+    }
+
+    .sortingdiv {
+        margin-left: .7rem;
+        margin-top: .5rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .sortingdiv h3 {
+        display: none;
+    }
+
+    .sortingitem h3 {
+        display: block !important;
+        font-size: .6rem;
+    }
+
+    .sortingitem {
+        margin-left: .1rem;
+    }
+
+    .productstitle h2 {
+        margin-left: .7rem;
+    }
+
+    .sortingdiv {
+        margin-left: .7rem;
+        margin-top: .5rem;
+    }
+}
+
+
+

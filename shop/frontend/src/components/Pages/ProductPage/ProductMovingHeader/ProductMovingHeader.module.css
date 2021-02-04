@@ -1,0 +1,155 @@
+.ProductMovingHeader {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-4rem);
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100vw;
+    height: 4rem;
+    background-color: var(--main-color);
+    background-image: linear-gradient(rgba(207,92,54,.98), rgba(207,92,54,.98)), url('../../../../media/back.jpg');
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: -.5rem;
+    z-index: 999;
+    transition: all .3s;
+}
+
+.ProductMovingHeaderNotTop {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+    transition: all .3s;
+}
+
+.desc {
+    height: 100%;
+    width: 83%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.title h3 {
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.title h1 {
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.img {
+    width: 17%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+}
+
+.img img {
+    height: 100%;
+    width: auto;
+}
+
+.cartbutton {
+    margin-left: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    outline: none;
+    height: 2rem;
+    background-color: transparent;
+    border: solid 1px var(--secondary-color);
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+    .desc {
+        width: 72%;
+    }
+
+    .img {
+        width: 28%;
+    }
+
+    .title h1 {
+        font-size: 1.1rem;
+    }
+
+    .title h3 {
+        font-size: .6rem;
+    }
+
+    .cartbutton {
+        margin-left: 2rem;
+        padding-right: .5rem;
+        padding-left: .5rem;
+        outline: none;
+        height: 1.5rem;
+        background-color: transparent;
+        border: solid 1px var(--secondary-color);
+        font-family: var(--main-font);
+        color: var(--secondary-color);
+        font-size: .6rem;
+        cursor: pointer;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .ProductMovingHeader {
+        height: 3.5rem;
+    }
+
+    .desc {
+        width: 72%;
+    }
+
+    .img {
+        width: 28%;
+    }
+
+    .title h1 {
+        font-size: .8rem;
+    }
+
+    .title h3 {
+        font-size: .4rem;
+    }
+
+    .cartbutton {
+        margin-left: 1rem;
+        padding-right: .3rem;
+        padding-left: .3rem;
+        outline: none;
+        height: 1.3rem;
+        background-color: transparent;
+        border: solid 1px var(--secondary-color);
+        font-family: var(--main-font);
+        color: var(--secondary-color);
+        font-size: .5rem;
+        cursor: pointer;
+    }
+}

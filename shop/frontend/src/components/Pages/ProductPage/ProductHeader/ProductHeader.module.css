@@ -1,0 +1,219 @@
+.ProductHeader {
+    width: 65rem;
+    height: 20rem;
+    background-color: var(--main-color);
+    background-image: linear-gradient(rgba(207,92,54,.98), rgba(207,92,54,.98)), url('../../../../media/back.jpg');
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: -.5rem;
+}
+
+.desc {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.title h3 {
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.title h1 {
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+}
+
+.img {
+    width: 40%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    margin-top: -1rem;
+    margin-right: -1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+.img img {
+    width: 80%;
+    height: auto;
+}
+
+.cartbutton {
+    margin-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: solid 1px var(--secondary-color);
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    .ProductHeader {
+        width: 55rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .ProductHeader {
+        width: 45rem;
+        height: 14rem;
+    }
+
+    .img {
+        margin-top: -.5rem;
+        margin-right: -.5rem;
+       }
+
+    .title h1 {
+        font-size: 2rem;
+    }
+
+    .title h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .ProductHeader {
+        width: 35rem;
+        height: 12rem;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .title h3 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .ProductHeader {
+        width: 27rem;
+        height: 10rem;
+    }
+
+    .title h1 {
+        font-size: 1.2rem;
+    }
+
+    .title h3 {
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .ProductHeader {
+        width: 24rem;
+        height: 10rem;
+    }
+
+    
+
+    .title h1 {
+        font-size: 1rem;
+    }
+
+    .title h3 {
+        font-size: .6rem;
+    }
+
+    .cartbutton {
+        margin-top: .5rem;
+        padding-right: .5rem;
+        padding-left: .5rem;
+        height: 1.7rem;
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 435px) {
+    .ProductHeader {
+        width: 22rem;
+        height: 9.5rem;
+    }
+
+    .img {
+     margin-top: -.3rem;
+     margin-right: -.3rem;
+    }
+
+    .title h1 {
+        font-size: 1rem;
+    }
+
+    .title h3 {
+        font-size: .6rem;
+    }
+
+    .cartbutton {
+        margin-top: .5rem;
+        padding-right: .5rem;
+        padding-left: .5rem;
+        height: 1.7rem;
+        font-size: .8rem;
+    }
+
+    .img img {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .ProductHeader {
+        width: 18rem;
+        height: 7.5rem;
+    }
+
+    .img {
+     margin-top: -.3rem;
+     margin-right: -.3rem;
+    }
+
+    .title h1 {
+        font-size: .8rem;
+    }
+
+    .title h3 {
+        font-size: .4rem;
+    }
+
+    .cartbutton {
+        margin-top: .3rem;
+        padding-right: .3rem;
+        padding-left: .5rem;
+        height: 1.4rem;
+        font-size: .7rem;
+    }
+
+    .img img {
+        width: 95%;
+    }
+}

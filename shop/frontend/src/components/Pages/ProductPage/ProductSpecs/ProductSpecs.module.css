@@ -1,0 +1,196 @@
+.ProductSpecs {
+    width: 65rem;
+    background-color: var(--secondary-color-light);
+    margin-top: 6rem;
+    padding: 2rem;
+    padding-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5rem;
+}
+
+.spinnerdiv {
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maintitle {
+    width: 100%;
+    text-align: left;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 400;
+} 
+
+.specstable {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+.specsrow {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.title {
+    width: 20%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.title h3 {
+    font-size: 1.4rem;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    font-weight: 400;
+}
+
+.spec {
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.spec h3 {
+    font-size: 1.4rem;
+    font-family: var(--main-font);
+    color: var(--grey);
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 1100px) {
+    .ProductSpecs {
+        width: 55rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .ProductSpecs {
+        width: 45rem;
+    }
+
+    .spec h3 {
+        font-size: 1.2rem;
+    }
+
+    .title h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .ProductSpecs {
+        width: 35rem;
+    }
+
+    .maintitle {
+        font-size: 1.5rem;
+    }
+
+    .spec h3 {
+        font-size: 1rem;
+    }
+
+    .title h3 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .ProductSpecs {
+        width: 27rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .maintitle {
+        font-size: 1.2rem;
+    }
+
+    .spec h3 {
+        font-size: .8rem;
+    }
+
+    .title h3 {
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .ProductSpecs {
+        width: 24rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .maintitle {
+        font-size: 1rem;
+    }
+
+    .spec h3 {
+        font-size: .6rem;
+    }
+
+    .title h3 {
+        font-size: .6rem;
+    }
+
+    .specstable {
+        width: 98%;
+    }
+}
+
+
+@media only screen and (max-width: 435px) {
+    .ProductSpecs {
+        width: 22rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .maintitle {
+        font-size: .8rem;
+    }
+
+    .spec h3 {
+        font-size: .5rem;
+    }
+
+    .title h3 {
+        font-size: .5rem;
+    }
+}
+
+@media only screen and (max-width:  370px) {
+    .ProductSpecs {
+        width: 18rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .maintitle {
+        font-size: .8rem;
+    }
+
+    .spec h3 {
+        font-size: .5rem;
+    }
+
+    .title h3 {
+        font-size: .5rem;
+    }
+}

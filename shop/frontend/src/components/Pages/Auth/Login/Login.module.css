@@ -1,0 +1,14 @@
+.login {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinnercont {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
