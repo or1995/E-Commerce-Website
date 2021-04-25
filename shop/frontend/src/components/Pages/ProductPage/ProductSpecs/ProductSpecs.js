@@ -1,7 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import classes from './ProductSpecs.module.css';
-import {withRouter, Link} from 'react-router-dom';
-import notepic from '../../../../media/Galaxy-Note-20-Ultra.png';
 import Spinner from '../../../Layout/Spinner/Spinner';
 
 

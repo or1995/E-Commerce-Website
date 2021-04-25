@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import classes from './ProductDesc.module.css';
-import notepic from '../../../../media/Galaxy-Note-20-Ultra.png';
 
 
 class ProductDesc extends Component {
