@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'shop',
         'USER': 'postgres',
         'PASSWORD': 'omar1995',
-        'HOST': 'localhost',
+        'HOST': 'shop.cpwawu3m07tu.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }

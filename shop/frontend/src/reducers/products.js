@@ -24,7 +24,7 @@ const initialState = {
     latestProducts: [],
     mostViewedProducts: [],
     localCart: JSON.parse(localStorage.getItem("cart")), // when no user is signed in
-    dbCart: [], // when user is signed in
+    dbCart: [], // when user is signed in (not handled anymore)
     dbCartId: null,
     currentProduct: null,
     currentSpecs: null,

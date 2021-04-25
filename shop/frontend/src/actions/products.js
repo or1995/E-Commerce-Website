@@ -17,7 +17,8 @@ import {
     ADD_ITEM_TO_DB_CART,
     ORDER_SUCCESS,
     GET_CURRENT_PRODUCT_ERROR,
-    ORDER_RESET
+    ORDER_RESET,
+    GET_PRODUCTS_ERROR
 } from './types';
 
 
