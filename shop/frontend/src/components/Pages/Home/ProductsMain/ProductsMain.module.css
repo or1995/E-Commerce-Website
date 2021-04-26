@@ -110,7 +110,7 @@
 
 @media only screen and (min-width: 1920px) {
     :global(.infinite-scroll-component) {
-        grid-template-columns: 20rem 20rem 20rem 20rem;
+        grid-template-columns: 20rem 20rem 20rem 20rem !important;
     }
 }
 
