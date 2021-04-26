@@ -100,6 +100,7 @@ export default function(state = initialState, action) {
             // the problem is here. has to do with the cart not being defind in localstorage
             console.log(JSON.parse(localStorage.getItem("cart")));
             let newArr = [...JSON.parse(localStorage.getItem("cart")), action.cartItem];
+            console.log(newArr);
             localStorage.setItem("cart", JSON.stringify(newArr));
             return {
                 ...state,
