@@ -1589,6 +1589,12 @@ body {
     font-weight: 400;
 } 
 
+@media only screen and (min-width: 1920px) {
+    .infinite-scroll-component {
+        grid-template-columns: 20rem 20rem 20rem 20rem;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .infinite-scroll-component {
         grid-template-columns: 17rem 17rem 17rem !important;
