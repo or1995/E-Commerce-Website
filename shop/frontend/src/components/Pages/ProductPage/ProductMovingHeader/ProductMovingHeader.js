@@ -6,50 +6,41 @@ import { addtoLocalCart, removeFromLocalCart } from '../../../../actions/product
 
 class ProductMovingHeader extends Component {
     state = {
-        inCart: false
+        currentcart: {}
     }
 
     componentDidMount() {
-        let item;
-        console.log(this.props.localCart);
-        for(item in this.props.localCart) {
-            if(this.props.productinfo.id === item.id) {
-                this.setState({
-                    inCart: true
-                })
-            }
+        let foundcart = this.props.localCart.find(cartitem => cartitem.id === this.props.productinfo.id);
+        console.log(foundcart);
+        if(foundcart) {
+            this.setState({
+                currentcart: foundcart
+            })
+        } else {
+            this.setState({
+                currentcart: {amount: 0}
+            })            
         }
     }
 
-    componentDidUpdate(prevProps) {
-        if(this.props.localCart !== prevProps.localCart) {
-            let item;
-            for(item of this.props.localCart) {
-                if(this.props.productinfo.id === item.id) {
-                    this.setState({
-                        inCart: true
-                    })
-                    return;
-                }
-            }
-            this.setState({
-                inCart: false
-            }) 
+    componentDidUpdate(prevprops) {
+        if(prevprops.localCart !== this.props.localCart) {
+            let foundcart = this.props.localCart.find(cartitem => cartitem.id === this.props.productinfo.id);
+            console.log(foundcart);
+            if(foundcart) {
+                this.setState({
+                    currentcart: foundcart
+                })
+            } else {
+                this.setState({
+                    currentcart: {amount: 0}
+                })            
+            }            
         }
     }
 
     addtocart = () => {
-        if(this.state.inCart) {
-            this.props.removeFromLocalCart(this.props.productinfo.id);
-            this.setState({
-                inCart: false
-            })
-        } else {
-            this.props.addtoLocalCart(this.props.productinfo);
-            this.setState({
-                inCart: true
-            })
-        }
+        this.props.addtoLocalCart(this.props.productinfo);
     }
 
     render() {
@@ -60,7 +51,10 @@ class ProductMovingHeader extends Component {
                         <h3>{this.props.productinfo.price}$</h3>
                         <h1>{this.props.productinfo.name}</h1>
                     </div>
-                    <button onClick={this.addtocart} className={classes.cartbutton}>{this.state.inCart? 'REMOVE FROM CART' : 'ADD TO CART'}</button>
+                    <div className={classes.buttonandcart}>
+                        <button onClick={this.addtocart} className={classes.cartbutton}>ADD TO CART</button>
+                        <h3>&nbsp;&nbsp;{this.state.currentcart.amount}&nbsp;in&nbsp;Cart</h3>
+                    </div>
                 </div>
                 <div className={classes.img}>
                     <img src={this.props.productinfo.picture1}/>

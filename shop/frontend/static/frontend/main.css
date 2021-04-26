@@ -2003,7 +2003,8 @@ body {
     color: var(--secondary-color);
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 1.5rem;    
+    font-size: 1.5rem; 
+    margin-top: 1rem;   
 }
 
 ._16ByQf3xaGD_JnVJxHQ2VE {
@@ -2236,6 +2237,21 @@ body {
 ._28e34Lc445T4be4j8nNKGC img {
     height: 100%;
     width: auto;
+}
+
+.cpgBcoKP0_7RD58xdf5Ff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cpgBcoKP0_7RD58xdf5Ff h3 {
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5rem; 
+    margin-top: 1rem;   
 }
 
 ._4HVf0t1mbP3Shb231qy5w {

@@ -71,6 +71,21 @@
     width: auto;
 }
 
+.buttonandcart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonandcart h3 {
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5rem; 
+    margin-top: 1rem;   
+}
+
 .cartbutton {
     margin-left: 2rem;
     padding-right: 1rem;

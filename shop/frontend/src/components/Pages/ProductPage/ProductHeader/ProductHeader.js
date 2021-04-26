@@ -52,7 +52,7 @@ class ProductHeader extends Component {
                     </div>
                     <div className={classes.buttonandcart}>
                         <button onClick={this.addtocart} className={classes.cartbutton}>ADD TO CART</button>
-                        <h3>&nbsp;{this.state.currentcart.amount}&nbsp;in&nbsp;Cart</h3>
+                        <h3>&nbsp;&nbsp;{this.state.currentcart.amount}&nbsp;in&nbsp;Cart</h3>
                     </div>
                 </div>
                 <div className={classes.img}>
