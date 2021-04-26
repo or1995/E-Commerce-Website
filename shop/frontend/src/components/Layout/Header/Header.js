@@ -172,7 +172,7 @@ class Header extends Component {
                             <div className={classes.cartbottom}>
                                 <h3>{item.price}$</h3>
                                 <div>
-                                    <h2>{item.name}</h2>
+                                    <h2>{item.name}&nbsp;&#215;&nbsp;{item.amount}</h2>
                                     <button onClick={() => this.props.removeFromLocalCart(item.id)}>REMOVE</button>
                                 </div>
                             </div>
