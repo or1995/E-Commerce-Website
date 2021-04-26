@@ -98,10 +98,18 @@ export default function(state = initialState, action) {
             }
         case ADD_ITEM_TO_LOCAL_CART:
             // the problem is here. has to do with the cart not being defind in localstorage
-            console.log(JSON.parse(localStorage.getItem("cart")));
-            let newArr = [...JSON.parse(localStorage.getItem("cart")), action.cartItem];
-            console.log(newArr);
-            localStorage.setItem("cart", JSON.stringify(newArr));
+            const localarr = JSON.parse(localStorage.getItem("cart"));
+            if(localarr.find(prod => action.cartItem.id === prod.id)) {
+                for(let [prodIndex, prod] of localarr) {
+                    if(prod.id === action.cartItem.id) {
+                        localarr[prodIndex].amount = localarr[prodIndex].amount + 1;
+                    }
+                }
+                localStorage.setItem("cart", JSON.stringify(newArr));
+            } else {
+                let newArr = [...localarr, {...action.cartItem, amount: 1}];
+                localStorage.setItem("cart", JSON.stringify(newArr));
+            }
             return {
                 ...state,
                 localCart: JSON.parse(localStorage.getItem("cart"))
