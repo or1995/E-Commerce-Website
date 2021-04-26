@@ -1992,6 +1992,20 @@ body {
     height: auto;
 }
 
+._3nuLBsW8IoGA3Q6yujCV0A {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+._3nuLBsW8IoGA3Q6yujCV0A span {
+    font-family: var(--main-font);
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5rem;    
+}
+
 ._16ByQf3xaGD_JnVJxHQ2VE {
     margin-top: 1rem;
     padding-right: 1rem;

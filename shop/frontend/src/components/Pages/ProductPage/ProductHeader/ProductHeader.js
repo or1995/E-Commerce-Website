@@ -4,6 +4,23 @@ import { connect } from 'react-redux';
 import { addtoLocalCart, removeFromLocalCart } from '../../../../actions/products';
 
 class ProductHeader extends Component {
+    state = {
+        currentcart: {}
+    }
+
+    componentDidMount() {
+        let foundcart = this.props.localCart.find(cartitem => cartitem.id === productinfo.id);
+        if(foundcart) {
+            this.setState({
+                currentcart: foundcart
+            })
+        } else {
+            this.setState({
+                currentcart: {amount: 0}
+            })            
+        }
+    }
+
     addtocart = () => {
         this.props.addtoLocalCart(this.props.productinfo);
     }
@@ -16,7 +33,10 @@ class ProductHeader extends Component {
                         <h3>{this.props.productinfo.price}$</h3>
                         <h1>{this.props.productinfo.name}</h1>
                     </div>
-                    <button onClick={this.addtocart} className={classes.cartbutton}>ADD TO CART</button>
+                    <div className={classes.buttonandcart}>
+                        <button onClick={this.addtocart} className={classes.cartbutton}>ADD TO CART</button>
+                        <h3>&nbsp;{this.state.currentcart.amount}&nbsp;in&nbsp;Cart</h3>
+                    </div>
                 </div>
                 <div className={classes.img}>
                     <img src={this.props.productinfo.picture1}/>
