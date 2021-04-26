@@ -9,7 +9,7 @@ class ProductHeader extends Component {
     }
 
     componentDidMount() {
-        let foundcart = this.props.localCart.find(cartitem => cartitem.id === productinfo.id);
+        let foundcart = this.props.localCart.find(cartitem => cartitem.id === this.props.productinfo.id);
         console.log(foundcart);
         if(foundcart) {
             this.setState({
