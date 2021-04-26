@@ -100,7 +100,7 @@ export default function(state = initialState, action) {
             // the problem is here. has to do with the cart not being defind in localstorage
             const localarr = JSON.parse(localStorage.getItem("cart"));
             if(localarr.find(prod => action.cartItem.id === prod.id)) {
-                console.log('duplicate');
+                console.log('duplicate', localarr);
                 for(let [prodIndex, prod] of localarr) {
                     if(prod.id === action.cartItem.id) {
                         localarr[prodIndex].amount = localarr[prodIndex].amount + 1;
