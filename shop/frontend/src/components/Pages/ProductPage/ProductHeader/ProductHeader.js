@@ -22,6 +22,22 @@ class ProductHeader extends Component {
         }
     }
 
+    componentDidUpdate(prevprops) {
+        if(prevprops.localCart !== this.props.localCart) {
+            let foundcart = this.props.localCart.find(cartitem => cartitem.id === this.props.productinfo.id);
+            console.log(foundcart);
+            if(foundcart) {
+                this.setState({
+                    currentcart: foundcart
+                })
+            } else {
+                this.setState({
+                    currentcart: {amount: 0}
+                })            
+            }            
+        }
+    }
+
     addtocart = () => {
         this.props.addtoLocalCart(this.props.productinfo);
     }
