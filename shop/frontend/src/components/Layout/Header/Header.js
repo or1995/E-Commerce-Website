@@ -163,7 +163,7 @@ class Header extends Component {
         /*} else {*/
             if(this.props.localCart) {
                 cartArr = this.props.localCart.map(item => {
-                    sum = sum + parseFloat(item.price);
+                    sum = sum + (parseFloat(item.price) * parseInt(item.amount));
                     return (
                         <div key={item.id} className={classes.cartcard}>
                             <div className={classes.carttop}>
