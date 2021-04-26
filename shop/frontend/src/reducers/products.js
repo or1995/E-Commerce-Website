@@ -106,7 +106,7 @@ export default function(state = initialState, action) {
                         localarr[prodIndex].amount = localarr[prodIndex].amount + 1;
                     }
                 }
-                localStorage.setItem("cart", JSON.stringify(newArr));
+                localStorage.setItem("cart", JSON.stringify(localarr));
             } else {
                 let newArr = [...localarr, {...action.cartItem, amount: 1}];
                 localStorage.setItem("cart", JSON.stringify(newArr));
