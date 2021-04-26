@@ -98,7 +98,7 @@ export default function(state = initialState, action) {
             }
         case ADD_ITEM_TO_LOCAL_CART:
             // the problem is here. has to do with the cart not being defind in localstorage
-            let newArr = [...state.localCart, action.cartItem];
+            let newArr = [...JSON.parse(localStorage.getItem("cart")), action.cartItem];
             localStorage.setItem("cart", JSON.stringify(newArr));
             return {
                 ...state,
