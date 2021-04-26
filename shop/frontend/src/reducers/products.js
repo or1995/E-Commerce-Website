@@ -101,7 +101,7 @@ export default function(state = initialState, action) {
             const localarr = JSON.parse(localStorage.getItem("cart"));
             if(localarr.find(prod => action.cartItem.id === prod.id)) {
                 console.log('duplicate', localarr);
-                for(let [prodIndex, prod] of localarr) {
+                for(let [prodIndex, prod] of localarr.entries()) {
                     if(prod.id === action.cartItem.id) {
                         localarr[prodIndex].amount = localarr[prodIndex].amount + 1;
                     }
