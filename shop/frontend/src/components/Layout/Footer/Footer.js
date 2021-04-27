@@ -9,7 +9,7 @@ class Footer extends Component {
                     ECOMMERCE
                 </div>
                 <div className={classes.right}>
-                    This website was created by Omar Ali OWD in 2020&copy;, this website was created for demonstration purposes.
+                    This website was created by Omar Ali in 2020&copy;, this website was created for demonstration purposes.
                 </div>
             </div>
         )

@@ -82,8 +82,7 @@
     color: var(--secondary-color);
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 1.5rem; 
-    margin-top: 1rem;   
+    font-size: 1.5rem;   
 }
 
 .cartbutton {
