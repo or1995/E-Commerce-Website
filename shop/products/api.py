@@ -99,12 +99,12 @@ class ProductsViewset(viewsets.ModelViewSet):
         latestproducts =  self.request.query_params.get('latestproducts', None)
         # get latest 4 products
         if latestproducts is not None:
-            queryset = queryset.all().order_by('-pub_date')[::-1][:1]
+            queryset = queryset.all().order_by('-pub_date')[::-1][:4]
 
         mostviews = self.request.query_params.get('mostviews', None)
         # get 4 most viewd products
         if mostviews is not None:
-            queryset = queryset.all().order_by('views')[::-1][:1]
+            queryset = queryset.all().order_by('views')[::-1][:4]
 
         # get all products with infinte scroll integrated
         if datanum is not None:
