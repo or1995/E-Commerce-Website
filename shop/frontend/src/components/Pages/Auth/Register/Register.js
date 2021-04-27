@@ -3,6 +3,7 @@ import classes from './Register.module.css';
 import AuthForm from '../AuthForm/AuthForm';
 import { connect } from 'react-redux';
 import { register } from '../../../../actions/auth';
+import { Redirect } from 'react-router-dom';
 import Spinner from '../../../Layout/Spinner/Spinner';
 
 class Register extends Component {
