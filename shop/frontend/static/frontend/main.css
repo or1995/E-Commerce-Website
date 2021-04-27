@@ -1593,6 +1593,16 @@ body {
     .infinite-scroll-component {
         grid-template-columns: 20rem 20rem 20rem 20rem !important;
     }
+
+    .O1bE-ilWAvhfHLSd5z7un {
+        grid-column-start: 1 !important;
+        grid-column-end: 6 !important;
+    } 
+
+    ._5yfHfs590t9fDKWR_Kb1e {
+        grid-column-start: 1 !important;
+        grid-column-end: 6 !important;
+    }
 }
 
 @media only screen and (max-width: 1200px) {

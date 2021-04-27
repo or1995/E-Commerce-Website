@@ -112,6 +112,16 @@
     :global(.infinite-scroll-component) {
         grid-template-columns: 20rem 20rem 20rem 20rem !important;
     }
+
+    .endMessage {
+        grid-column-start: 1 !important;
+        grid-column-end: 6 !important;
+    } 
+
+    .spinnercontainer {
+        grid-column-start: 1 !important;
+        grid-column-end: 6 !important;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
