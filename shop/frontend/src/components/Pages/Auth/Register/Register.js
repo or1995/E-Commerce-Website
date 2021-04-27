@@ -53,6 +53,7 @@ class Register extends Component {
 }
 
 const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated,
     error: state.auth.regError,
     isLoading: state.auth.isLoading
 })
