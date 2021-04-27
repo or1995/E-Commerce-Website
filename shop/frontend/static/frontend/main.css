@@ -1848,15 +1848,20 @@ body {
 }
 
 ._3Q5a9CNc9qNlYDQ7LyrQNw {
-    height: 14.5rem;
-    padding-left: 2.2rem;
-    padding-right: 2.2rem;
+    height: 16rem;
     display: grid;
-    grid-template-columns: 16rem 16rem 16rem 16rem;
-    gap: 2.2rem;
+    grid-template-columns: 20rem 20rem 20rem 20rem;
+    grid-template-columns: 16rem;
+    gap: 3.5rem;
     justify-content: center;
     justify-items: center;
     transition: all .3s;
+}
+
+@media only screen and (max-width: 1919px) {
+    ._3Q5a9CNc9qNlYDQ7LyrQNw {
+        grid-template-columns: 20rem 20rem 20rem !important;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
