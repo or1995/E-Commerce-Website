@@ -15,7 +15,6 @@ import {
 } from './types';
 
 export const register = (username, email, password) => dispatch => {
-    console.log(username, email, password);
     // Headers
     const config = {
         headers: {
